@@ -17,7 +17,7 @@ export OPENAI_API_KEY="YOUR_OPENAI_API_KEY"
 ```
 
 ### Example
-`$gpt "Write a bash script that will read the lines from "myinputs.txt" and then execute the python script "myscript.py" using the text of each line as the value for the "--input" parameter."
+`$gpt "Write a bash script that will read the lines from "myinputs.txt" and then execute the python script "myscript.py" using the text of each line as the value for the "--input" parameter."`
 
 ```
 #!/bin/bash
