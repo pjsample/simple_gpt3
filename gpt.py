@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 import openai
 import argparse
+import os
 
 
 def parse_args():
@@ -11,8 +12,10 @@ def parse_args():
     return parser.parse_args()
 
 
-def submit_prompt(prompt, model="text-davinci-002", max_tokens=100):
-    response = openai.Completion.create(model=model, prompt=prompt, temperature=0, max_tokens=max_tokens)
+def submit_prompt(prompt, model="text-davinci-002", max_tokens=100, temperature=0, open_api_key=None):
+    if open_api_key is not None:
+        openai.api_key = open_api_key
+    response = openai.Completion.create(model=model, prompt=prompt, temperature=temperature, max_tokens=max_tokens)
     return response['choices'][0]['text']
 
 
@@ -20,6 +23,8 @@ def main():
     args = parse_args()
     prompt = args.prompt
     max_tokens = int(args.max_tokens)
+
+    openai.api_key = os.getenv("OPENAI_API_KEY")
 
     response = submit_prompt(prompt, max_tokens=max_tokens)
 
