@@ -35,11 +35,11 @@ python web_UI.py
 
 ### To permanently add environment variables
 ```
-Add these lines to `~/.bash_profile`
+Add these lines to `~/.zshrc`
 
-PATH="/DIR_WHERE_YOU_CLONED_SIMPLE_GPT3:$PATH"
+export PATH="/DIR_WHERE_YOU_CLONED_SIMPLE_GPT3:$PATH"
 
-OPENAI_API_KEY="YOUR_OPENAI_API_KEY"
+export OPENAI_API_KEY="YOUR_OPENAI_API_KEY"
 ```
 
 ### Command line Example
