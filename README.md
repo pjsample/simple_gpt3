@@ -1,6 +1,10 @@
 # simple_gpt3
 A lightweight script for calling GPT-3 in your terminal or by using a web UI that you run locally. All calls to GPT-3 use the GPT-3 API so you'll need an OPENAI API key. [OpenAI](https://openai.com/api/)
 
+### Terminal
+![Terminal Example](https://github.com/pjsample/simple_gpt3/blob/main/images/terminal_example.png)
+### Web UI
+![WebUI Example](https://github.com/pjsample/simple_gpt3/blob/main/images/webUI_example.png)
 
 ### Getting it to work
 #### Command line interface
