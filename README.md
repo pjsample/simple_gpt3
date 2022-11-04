@@ -10,7 +10,7 @@ git clone git@github.com:pjsample/simple_gpt3.git
 
 cd simple_gpt3
 chmod +x gpt.py
-cp gpt.py gpt
+cp gpt.py gpt3
 
 export PATH=$PATH:$PWD
 
