@@ -12,6 +12,7 @@ A lightweight client for interacting with GPT-3 in your terminal or by using a w
 ## Getting it to work
 ```
 pip install openai
+pip install prompt-toolkit
 git clone git@github.com:pjsample/simple_gpt3.git
 
 cd simple_gpt3
