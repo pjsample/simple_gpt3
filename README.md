@@ -1,4 +1,4 @@
-# simple_gpt3
+# Simple GPT-3
 A lightweight client for interacting with GPT-3 in your terminal or by using a web UI that you run locally. All calls to GPT-3 use the GPT-3 API so you'll need an OPENAI API key. [OpenAI](https://openai.com/api/)
 
 
@@ -12,6 +12,7 @@ A lightweight client for interacting with GPT-3 in your terminal or by using a w
 ## Getting it to work
 ```
 pip install openai
+pip install prompt-toolkit
 git clone git@github.com:pjsample/simple_gpt3.git
 
 cd simple_gpt3
@@ -21,6 +22,19 @@ cp simple_gpt3.py simple_gpt3
 export PATH=$PATH:$PWD
 
 export OPENAI_API_KEY="YOUR_OPENAI_API_KEY"
+
+simple_gpt3
+```
+
+#### Optional parameters
+```
+usage: simple_gpt3 [--model MODEL] [--max-tokens MAX_TOKENS] [--temperature TEMPERATURE]
+                      [--api_key API_KEY]
+
+Defaults:
+--model text-davinci-002
+--max-tokens 2000
+--temperature 0
 ```
 
 ### To permanently add environment variables
