@@ -7,13 +7,14 @@ from prompt_toolkit.key_binding import KeyBindings
 
 def parse_args():
     parser = argparse.ArgumentParser(description='Run GPT-3 from the terminal.')
-    parser.add_argument('--model', type=str, help='The GPT-3 model that will be called.', default='text-davinci-002')
+    parser.add_argument('--model', type=str, help='The GPT-3 model that will be called.', default='text-davinci-003')
     parser.add_argument('--max-tokens', type=str, help='The max tokens to return.', default='2000')
-    parser.add_argument('--temperature', type=str, help='The temperature to use.', default='0')
+    parser.add_argument('--temperature', type=str, help='The temperature to use.', default='0.2')
     parser.add_argument('--api_key', type=str, help='Your OpenAI API Key. Alternatively, set a OPENAI_API_KEY environment variable.', default='')
 
     
     return parser.parse_args()
+
 
 
 def welcome_message():
@@ -56,7 +57,7 @@ def input_prompt(session):
 
 def output_response(response):
     response = response.lstrip()
-    
+
     print('\n')
     print_formatted_text(HTML('<b>GPT-3: </b>'))
     print(f"{response}")
